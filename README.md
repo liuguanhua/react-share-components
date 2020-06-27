@@ -9,7 +9,7 @@
 
 ## 📖 介绍
 
-一键分享到各社交网站。将原[share.js](https://github.com/overtrue/share.js)包装成了一个 react 版本，感谢原作者！
+一键分享到各社交网站。将原[share.js](https://github.com/overtrue/share.js)包装了一个 react 版本，感谢原作者！
 
 ## 🏠 主页
 
@@ -50,21 +50,19 @@ import ReactShareComponents from 'react-share-components';
 />
 ```
 
-````
 参数：
-  属性 | 类型 | 默认值
-  ---|---|---
-  url | string  | window.location.href
-  title | string  | ```读取head标签<meta name="title" content="react-share-components" />或document.title的内容```
-  description | string  | ```读取head标签<meta name="description" content="一键分享到各社交网站" />的内容```
-  source | string  | ```读取head标签<meta name="site" content="https://github.com/liuguanhua/react-share-components" />的内容```
-  image | string  | 读取第一个img标签地址
-  sites | ```("qzone" | "weibo" | "wechat" | "google" | "twitter" | "qq" | "douban" | "linkedin" | "facebook")[]```  | ```["qzone","weibo","wechat", "google","twitter","qq","douban","linkedin" , "facebook"]```
-  disabled | ```("qzone" | "weibo" | "wechat" | "google" | "twitter" | "qq" | "douban" | "linkedin" | "facebook")[]```  | []
-  wechatQrcodeTitle | React.ReactNode | 微信扫一扫：分享
-  wechatQrcodeHelper | React.ReactNode | ```<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>```
-  wechatQrcodeProps | [QRCode](https://github.com/zpao/qrcode.react#available-props) | ```{size:100}```
-````
+属性 | 类型 | 默认值
+---|---|---
+url | string | window.location.href
+title | string | `读取head标签<meta name="title" content="react-share-components" />或document.title的内容`
+description | string | `读取head标签<meta name="description" content="一键分享到各社交网站" />的内容`
+source | string | `读取head标签<meta name="site" content="https://github.com/liuguanhua/react-share-components" />的内容`
+image | string | 读取第一个 img 标签地址
+sites | `("qzone" | "weibo" | "wechat" | "google" | "twitter" | "qq" | "douban" | "linkedin" | "facebook")[]` | `["qzone","weibo","wechat", "google","twitter","qq","douban","linkedin" , "facebook"]`
+disabled | `("qzone" | "weibo" | "wechat" | "google" | "twitter" | "qq" | "douban" | "linkedin" | "facebook")[]` | []
+wechatQrcodeTitle | React.ReactNode | 微信扫一扫：分享
+wechatQrcodeHelper | React.ReactNode | `<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>`
+wechatQrcodeProps | [QRCode](https://github.com/zpao/qrcode.react#available-props) | `{size:100}`
 
 ```
 下载：git clone https://github.com/liuguanhua/react-share-components.git
