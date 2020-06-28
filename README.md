@@ -1,4 +1,4 @@
-<h1 align="center">react-share-components 👋</h1>
+<h1 align="center">react-share-components 👏</h1>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D10-blue.svg" />
@@ -9,7 +9,7 @@
 
 ## 📖 介绍
 
-一键分享到各社交网站。将原[share.js](https://github.com/overtrue/share.js)包装了一个 react 版本，感谢原作者！
+一键分享到各社交网站。将原[share.js](https://github.com/overtrue/share.js)封装了一个 react 版本。
 
 ## 🏠 主页
 
@@ -32,39 +32,46 @@ npm install react-share-components
 ```sh
 import ReactShareComponents from 'react-share-components';
 
-<ReactShareComponents
-  sites={[
-    'qzone',
-    'weibo',
-    'wechat',
-    'google',
-    'twitter',
-    'qq',
-    'douban',
-    'linkedin',
-    'facebook',
-  ]}
-  url="https://github.com/liuguanhua/react-share-components"
-  title="react-share-components"
-  description="一键分享到各社交网站"
-/>
+const App = () => {
+  return (
+    <ReactShareComponents
+      sites={[
+        'qzone',
+        'weibo',
+        'wechat',
+        'google',
+        'twitter',
+        'qq',
+        'douban',
+        'linkedin',
+        'facebook',
+      ]}
+      url="https://github.com/liuguanhua/react-share-components"
+      title="react-share-components"
+      description="一键分享到各社交网站"
+    />
+  );
+};
+
 ```
 
 参数：
 属性 | 类型 | 默认值
 ---|---|---
-url | string | window.location.href
+url | string | `window.location.href`
 title | string | `读取head标签<meta name="title" content="react-share-components" />或document.title的内容`
 description | string | `读取head标签<meta name="description" content="一键分享到各社交网站" />的内容`
 source | string | `读取head标签<meta name="site" content="https://github.com/liuguanhua/react-share-components" />的内容`
 image | string | 读取第一个 img 标签地址
-sites | `("qzone" | "weibo" | "wechat" | "google" | "twitter" | "qq" | "douban" | "linkedin" | "facebook")[]` | `["qzone","weibo","wechat", "google","twitter","qq","douban","linkedin" , "facebook"]`
-disabled | `("qzone" | "weibo" | "wechat" | "google" | "twitter" | "qq" | "douban" | "linkedin" | "facebook")[]` | []
+sites | ("qzone" &#124; "weibo" &#124; "wechat" &#124; "google" &#124; "twitter" &#124; "qq" &#124; "douban" &#124; "linkedin" &#124; "facebook")[] | `["qzone","weibo","wechat","google","twitter","qq", "douban","linkedin","facebook"]`
+disabled | ("qzone" &#124; "weibo" &#124; "wechat" &#124; "google" &#124; "twitter" &#124; "qq" &#124; "douban" &#124; "linkedin" &#124; "facebook")[] | []
 wechatQrcodeTitle | React.ReactNode | 微信扫一扫：分享
 wechatQrcodeHelper | React.ReactNode | `<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>`
 wechatQrcodeProps | [QRCode](https://github.com/zpao/qrcode.react#available-props) | `{size:100}`
 
-```
+## ⌨️ 本地开发
+
+```
 下载：git clone https://github.com/liuguanhua/react-share-components.git
 
 开发：
@@ -73,13 +80,13 @@ wechatQrcodeProps | [QRCode](https://github.com/zpao/qrcode.react#available-prop
     yarn start
 
 预览：
-    cd example
+    cd examplev
     yarn install
     yarn start
     http://localhost:1234
 ```
 
-## 😊 鸣谢
+## 😊 致谢
 
 [share.js](https://github.com/overtrue/share.js)
 
