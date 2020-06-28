@@ -13,7 +13,7 @@
 
 ## 🏠 主页
 
-[在线预览](https://liuguanhua.github.io/react-share-components/)
+[demo](https://liuguanhua.github.io/react-share-components/)
 
 ![demo](https://s1.ax1x.com/2020/06/27/Nc1Cbq.png)
 
@@ -30,9 +30,11 @@ npm install react-share-components
 ## 💻 使用
 
 ```sh
+import React from 'react';
+import ReactDOM from 'react-dom';
 import ReactShareComponents from 'react-share-components';
 
-const App = () => {
+const MyComponent = () => {
   return (
     <ReactShareComponents
       sites={[
@@ -53,11 +55,12 @@ const App = () => {
   );
 };
 
+ReactDOM.render(<MyComponent />, document.body);
 ```
 
 参数：
 属性 | 类型 | 默认值
----|---|---
+:-: |:-: |:-:
 url | string | `window.location.href`
 title | string | `读取head标签<meta name="title" content="react-share-components" />或document.title的内容`
 description | string | `读取head标签<meta name="description" content="一键分享到各社交网站" />的内容`
@@ -65,8 +68,8 @@ source | string | `读取head标签<meta name="site" content="https://github.com
 image | string | 读取第一个 img 标签地址
 sites | ("qzone" &#124; "weibo" &#124; "wechat" &#124; "google" &#124; "twitter" &#124; "qq" &#124; "douban" &#124; "linkedin" &#124; "facebook")[] | `["qzone","weibo","wechat","google","twitter","qq", "douban","linkedin","facebook"]`
 disabled | ("qzone" &#124; "weibo" &#124; "wechat" &#124; "google" &#124; "twitter" &#124; "qq" &#124; "douban" &#124; "linkedin" &#124; "facebook")[] | []
-wechatQrcodeTitle | React.ReactNode | 微信扫一扫：分享
-wechatQrcodeHelper | React.ReactNode | `<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>`
+wechatQrcodeTitle | ReactNode | 微信扫一扫：分享
+wechatQrcodeHelper | ReactNode | `<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>`
 wechatQrcodeProps | [QRCode](https://github.com/zpao/qrcode.react#available-props) | `{size:100}`
 
 ## ⌨️ 本地开发
@@ -80,7 +83,7 @@ wechatQrcodeProps | [QRCode](https://github.com/zpao/qrcode.react#available-prop
     yarn start
 
 预览：
-    cd examplev
+    cd example
     yarn install
     yarn start
     http://localhost:1234
