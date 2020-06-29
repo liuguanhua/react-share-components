@@ -1,6 +1,6 @@
 <h1 align="center">react-share-components 👏</h1>
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.2-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D10-blue.svg" />
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
@@ -9,13 +9,13 @@
 
 ## 📖 介绍
 
-一键分享到各社交网站。将原[share.js](https://github.com/overtrue/share.js)封装了一个 react 版本。
+一键分享到各社交平台。将原[share.js](https://github.com/overtrue/share.js)封装了一个 react 版本。
 
 ## 🏠 主页
 
 [demo](https://liuguanhua.github.io/react-share-components/)
 
-![demo](https://s1.ax1x.com/2020/06/27/Nc1Cbq.png)
+![预览](https://s1.ax1x.com/2020/06/27/Nc1Cbq.png)
 
 ## ✨ 安装
 
@@ -50,7 +50,7 @@ const MyComponent = () => {
       ]}
       url="https://github.com/liuguanhua/react-share-components"
       title="react-share-components"
-      description="一键分享到各社交网站"
+      description="一键分享到各社交平台"
     />
   );
 };
@@ -63,7 +63,7 @@ ReactDOM.render(<MyComponent />, document.body);
 :-: |:-: |:-:
 url | string | `window.location.href`
 title | string | `读取head标签<meta name="title" content="react-share-components" />或document.title的内容`
-description | string | `读取head标签<meta name="description" content="一键分享到各社交网站" />的内容`
+description | string | `读取head标签<meta name="description" content="一键分享到各社交平台" />的内容`
 source | string | `读取head标签<meta name="site" content="https://github.com/liuguanhua/react-share-components" />的内容`
 image | string | 读取第一个 img 标签地址
 sites | ("qzone" &#124; "weibo" &#124; "wechat" &#124; "google" &#124; "twitter" &#124; "qq" &#124; "douban" &#124; "linkedin" &#124; "facebook")[] | `["qzone","weibo","wechat","google","twitter","qq", "douban","linkedin","facebook"]`
@@ -89,7 +89,7 @@ wechatQrcodeProps | [QRCode](https://github.com/zpao/qrcode.react#available-prop
     http://localhost:1234
 ```
 
-## 😊 致谢
+## 😊 感谢
 
 [share.js](https://github.com/overtrue/share.js)
 
