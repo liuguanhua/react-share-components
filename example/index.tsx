@@ -22,7 +22,7 @@ const App = () => {
         ]}
         url="https://github.com/liuguanhua/react-share-components"
         title="react-share-components"
-        description="一键分享到各社交网站"
+        description="一键分享到各社交平台"
       />
     </div>
   );

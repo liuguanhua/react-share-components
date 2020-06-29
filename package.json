@@ -1,17 +1,35 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "description": "一键分享到各社交平台",
   "files": [
     "dist",
     "src"
   ],
+  "keywords": [
+    "component",
+    "components",
+    "frontend",
+    "react",
+    "react-component",
+    "react-share-components",
+    "share",
+    "social-share",
+    "react-share"
+  ],
+  "bugs": {
+    "url": "https://github.com/liuguanhua/react-share-components/issues"
+  },
   "engines": {
     "node": ">=10"
   },
   "homepage": "https://liuguanhua.github.io/react-share-components",
-  "repository": "https://github.com/liuguanhua/react-share-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuguanhua/react-share-components"
+  },
   "scripts": {
     "start": "yarn clean && tsdx watch",
     "build": "yarn clean && tsdx build",
