@@ -34557,7 +34557,7 @@ var getDefaultProps = function getDefaultProps() {
   var title = getMetaContentByName('title') || getMetaContentByName('Title') || document.title;
   var description = getMetaContentByName('description') || getMetaContentByName('Description') || '';
   var site = getMetaContentByName('site') || getMetaContentByName('Site') || document.title;
-  var sites = ['qzone', 'weibo', 'google', 'twitter', 'qq', 'douban', 'linkedin', 'facebook', 'wechat'];
+  var sites = ['weibo', 'qq', 'wechat', 'douban', 'qzone', 'linkedin', 'facebook', 'twitter', 'google'];
   return {
     url: url,
     origin: origin,
@@ -34573,7 +34573,9 @@ var getDefaultProps = function getDefaultProps() {
     wechatQrcodeHelper: (0, _react.createElement)(_react.Fragment, null, (0, _react.createElement)("p", null, "\u5FAE\u4FE1\u91CC\u70B9\u201C\u53D1\u73B0\u201D\uFF0C\u626B\u4E00\u4E0B"), (0, _react.createElement)("p", null, "\u4E8C\u7EF4\u7801\u4FBF\u53EF\u5C06\u672C\u6587\u5206\u4EAB\u81F3\u670B\u53CB\u5708\u3002")),
     wechatQrcodeProps: {
       size: 100
-    }
+    },
+    className: '',
+    style: {}
   };
 };
 
@@ -34619,7 +34621,9 @@ var ReactShareComponents = function ReactShareComponents(_ref) {
       wechatQrcodeTitle = _encodeOptions.wechatQrcodeTitle,
       wechatQrcodeHelper = _encodeOptions.wechatQrcodeHelper,
       _encodeOptions$wechat = _encodeOptions.wechatQrcodeProps,
-      wechatQrcodeProps = _encodeOptions$wechat === void 0 ? {} : _encodeOptions$wechat;
+      wechatQrcodeProps = _encodeOptions$wechat === void 0 ? {} : _encodeOptions$wechat,
+      className = _encodeOptions.className,
+      style = _encodeOptions.style;
 
   var templates = {
     qzone: "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey" + qsStringify({
@@ -34676,7 +34680,8 @@ var ReactShareComponents = function ReactShareComponents(_ref) {
     })
   };
   return (0, _react.createElement)("div", {
-    className: "social-share"
+    className: "social-share" + (className ? " " + className : ''),
+    style: style
   }, filterSites(sites, disabled).map(function (site, i) {
     var isWechat = Object.is(site, 'wechat');
     return (0, _react.createElement)("a", Object.assign({
@@ -34847,7 +34852,7 @@ var App = function App() {
   return React.createElement("div", {
     className: "app"
   }, React.createElement("h2", null, "react-share-components"), React.createElement(_1.default, {
-    sites: ['qzone', 'weibo', 'wechat', 'google', 'twitter', 'qq', 'douban', 'linkedin', 'facebook'],
+    sites: ['weibo', 'qq', 'wechat', 'douban', 'qzone', 'linkedin', 'facebook', 'twitter', 'google'],
     url: "https://github.com/liuguanhua/react-share-components",
     title: "react-share-components",
     description: "\u4E00\u952E\u5206\u4EAB\u5230\u5404\u793E\u4EA4\u5E73\u53F0"
@@ -34883,7 +34888,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57621" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63932" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
