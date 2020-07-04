@@ -8,6 +8,7 @@ import './index.css';
 const App = () => {
   return (
     <div className="app">
+      <h2>react-share-components</h2>
       <ReactShareComponents
         sites={[
           'qzone',
