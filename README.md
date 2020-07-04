@@ -33,6 +33,7 @@ npm install react-share-components
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactShareComponents from 'react-share-components';
+import 'react-share-components/dist/react-share-components.css'
 
 const MyComponent = () => {
   return (
