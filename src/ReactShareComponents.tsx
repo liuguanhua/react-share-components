@@ -3,15 +3,15 @@ import QRCode, { SvgQRCodeProps, CanvasQRCodeProps } from 'qrcode.react';
 import './reactShareComponents.scss';
 
 export declare const TShareSites: [
-  'qzone',
   'weibo',
-  'wechat',
-  'google',
-  'twitter',
   'qq',
+  'wechat',
   'douban',
+  'qzone',
   'linkedin',
-  'facebook'
+  'facebook',
+  'twitter',
+  'google'
 ];
 export type ShareSitesTypes = typeof TShareSites[number];
 export type ShareSitesTypesGroup = ShareSitesTypes[];
@@ -29,6 +29,8 @@ export interface ShareProps {
   wechatQrcodeTitle: React.ReactNode;
   wechatQrcodeHelper: React.ReactNode;
   wechatQrcodeProps?: Partial<CanvasQRCodeProps | SvgQRCodeProps>;
+  className: string;
+  style: React.CSSProperties;
 }
 
 export type ReactShareComponentsProps = Partial<ShareProps>;
@@ -54,15 +56,15 @@ const getDefaultProps = (): ShareProps => {
     getMetaContentByName('Site') ||
     document.title;
   const sites: ShareSitesTypesGroup = [
-    'qzone',
     'weibo',
-    'google',
-    'twitter',
     'qq',
+    'wechat',
     'douban',
+    'qzone',
     'linkedin',
     'facebook',
-    'wechat',
+    'twitter',
+    'google',
   ];
   return {
     url,
@@ -85,6 +87,8 @@ const getDefaultProps = (): ShareProps => {
     wechatQrcodeProps: {
       size: 100,
     },
+    className: '',
+    style: {},
   };
 };
 
@@ -137,6 +141,8 @@ const ReactShareComponents: React.FC<ShareProps> = ({ children, ...rest }) => {
     wechatQrcodeTitle,
     wechatQrcodeHelper,
     wechatQrcodeProps = {},
+    className,
+    style,
   } = encodeOptions(rest);
 
   const templates = {
@@ -196,7 +202,10 @@ const ReactShareComponents: React.FC<ShareProps> = ({ children, ...rest }) => {
     })}`,
   };
   return (
-    <div className="social-share">
+    <div
+      className={`social-share${className ? ` ${className}` : ''}`}
+      style={style}
+    >
       {filterSites(sites, disabled).map((site, i) => {
         const isWechat = Object.is(site, 'wechat');
         return (
