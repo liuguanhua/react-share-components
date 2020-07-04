@@ -11,15 +11,15 @@ const App = () => {
       <h2>react-share-components</h2>
       <ReactShareComponents
         sites={[
-          'qzone',
           'weibo',
-          'wechat',
-          'google',
-          'twitter',
           'qq',
+          'wechat',
           'douban',
+          'qzone',
           'linkedin',
           'facebook',
+          'twitter',
+          'google',
         ]}
         url="https://github.com/liuguanhua/react-share-components"
         title="react-share-components"
